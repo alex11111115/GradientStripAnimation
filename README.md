@@ -22,10 +22,14 @@ Are you tired of boring, static UIs that make your users yawn? Say goodbye to du
 4. **Performance Optimized**: Silky smooth animations that won't make your app break a sweat
 
 ## 📹 Video
-
+https://github.com/user-attachments/assets/c68bcd1f-f130-4226-ac00-451dc97f32f2
 
 
 ## 📸 Screenshots
+![Screenshot_٢٠٢٤٠٨١٩-٠٢١٦١٩_GradientStripAnimation](https://github.com/user-attachments/assets/8f1fb519-3bed-487e-8520-34e807ae3aa7)
+![Screenshot_٢٠٢٤٠٨١٩-٠٢١٦٢٢_GradientStripAnimation](https://github.com/user-attachments/assets/382ee354-67b4-4543-a243-72f551619e58)
+![Screenshot_٢٠٢٤٠٨١٩-٠٢١٦٣٩_GradientStripAnimation](https://github.com/user-attachments/assets/9d50aca2-acbb-4b9e-bff9-7bb9755be018)
+![Screenshot_٢٠٢٤٠٨١٩-٠٢١٧٤٩_GradientStripAnimation](https://github.com/user-attachments/assets/1393c5e7-dfd3-4b9d-86ec-c81884db5a56)
 
 
 
