@@ -183,7 +183,9 @@ So, are you ready to elevate your UI game and leave the mundane world behind? Th
 
 Remember: In a world of static, be the motion. In a sea of boring, be the `GradientStripAnimation`. 🌈✨# GradientStripAnimation
 
-layerView is developed and maintained by [alex11111115](https://github.com/alex11111115).
+## Credits
+
+GradientStripAnimation is developed and maintained by [alex11111115](https://github.com/alex11111115).
 
 ## Contribution
 
