@@ -1,0 +1,110 @@
+/*
+ * Copyright (C) 2024 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ 
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
+}
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 16
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        
+        namespace 'com.kilobyte.gradientstripanimation'
+        
+    }
+
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    packagingOptions {
+        resources {
+            excludes += [
+                'META-INF/DEPENDENCIES',
+                'META-INF/LICENSE',
+                'META-INF/LICENSE.txt',
+                'META-INF/license.txt',
+                'META-INF/NOTICE',
+                'META-INF/NOTICE.txt',
+                'META-INF/notice.txt',
+                'META-INF/ASL2.0'
+            ]
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.7.0'
+    implementation 'androidx.core:core:1.12.0'
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            afterEvaluate {
+                from components.release
+            }
+            groupId = 'com.github.alex11111115'
+            artifactId = 'GradientStripAnimation'
+            version = '1.0'
+
+            pom {
+                name = 'GradientStripAnimation'
+                description = '# 🌈 GradientStripAnimation: Unleash the Power of Hypnotic UI Magic! 🚀 \n Are you tired of boring, static UIs that make your users yawn? Say goodbye to dull designs and hello to the mesmerizing world of **GradientStripAnimation**! This is not just another animation library – it is a visual revolution that will have your users glued to their screens, questioning reality itself! 🤯'
+                url = 'https://github.com/alex11111115/GradientStripAnimation'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'alex11111115'
+                        name = 'obieda'
+                        email = 'bodybody15151@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/alex11111115/GradientStripAnimation.git'
+                    developerConnection = 'scm:git:ssh://github.com/alex11111115/GradientStripAnimation.git'
+                    url = 'https://github.com/alex11111115/GradientStripAnimation'
+                }
+            }
+        }
+    }
+}
