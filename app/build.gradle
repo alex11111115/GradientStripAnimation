@@ -25,7 +25,7 @@ android {
     
     defaultConfig {
         applicationId "com.kilobyte.gradientstripanimation"
-        minSdk 16
+        minSdk 21
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -37,6 +37,7 @@ android {
 
     buildTypes {
         release {
+            shrinkResources false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
