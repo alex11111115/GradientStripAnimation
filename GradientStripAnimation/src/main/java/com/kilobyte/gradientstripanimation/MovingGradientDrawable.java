@@ -9,6 +9,7 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -50,6 +51,17 @@ public class MovingGradientDrawable extends Drawable {
     }
 
     @Override
+    public int getAlpha() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            return paint.getAlpha();
+        } else {
+            // For older versions, we can't get the alpha directly from the paint
+            // So we'll return the full opacity
+            return 255;
+        }
+    }
+
+    @Override
     public void setColorFilter(@Nullable ColorFilter colorFilter) {
         paint.setColorFilter(colorFilter);
         invalidateSelf();
@@ -57,7 +69,12 @@ public class MovingGradientDrawable extends Drawable {
 
     @Override
     public int getOpacity() {
-        return PixelFormat.TRANSLUCENT;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            return paint.getAlpha() == 255 ? PixelFormat.OPAQUE : PixelFormat.TRANSLUCENT;
+        } else {
+            // For older versions, we'll assume it's always translucent
+            return PixelFormat.TRANSLUCENT;
+        }
     }
 
     public void setOffset(float offset) {

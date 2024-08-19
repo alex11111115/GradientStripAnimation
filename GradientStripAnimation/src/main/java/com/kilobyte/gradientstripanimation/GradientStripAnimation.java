@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.ColorInt;
 import androidx.core.view.ViewCompat;
 
+import com.kilobyte.gradientstripanimation.MovingGradientDrawable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +25,6 @@ public class GradientStripAnimation {
     private static final String TAG = "GradientStripAnimation";
     private Context context;
     private LinearLayout container;
-    private int stripCount;
     private long duration;
     private long stripDelay;
     private OnAnimationEndListener onAnimationEndListener;
@@ -53,7 +53,7 @@ public class GradientStripAnimation {
             this.colors = colors;
             this.cornerRadius = 4f;
             this.enableShadow = true;
-            this.shadowColor = 0x66000000;
+            this.shadowColor = 0x66222327;
             this.shadowRadius = 1f;
             this.shadowDx = 0f;
             this.shadowDy = 0f;
@@ -145,17 +145,11 @@ public class GradientStripAnimation {
     public GradientStripAnimation(Context context, LinearLayout container) {
         this.context = context;
         this.container = container;
-        this.stripCount = 3;
         this.duration = 10000;
-        this.stripDelay = 200;
+        this.stripDelay = 100;
         this.mainHandler = new Handler(Looper.getMainLooper());
         this.runningAnimations = new ArrayList<>();
         this.stripConfigs = new ArrayList<>();
-    }
-
-    public GradientStripAnimation setStripCount(int stripCount) {
-        this.stripCount = stripCount;
-        return this;
     }
 
     public GradientStripAnimation setDuration(long duration) {
@@ -184,13 +178,13 @@ public class GradientStripAnimation {
             return;
         }
 
-        Log.d(TAG, "Starting animation with stripCount: " + stripCount);
+        Log.d(TAG, "Starting animation with stripCount: " + stripConfigs.size());
 
         container.removeAllViews();
         runningAnimations.clear();
 
-        for (int i = 0; i < stripCount; i++) {
-            StripConfig config = i < stripConfigs.size() ? stripConfigs.get(i) : getDefaultStripConfig();
+        for (int i = 0; i < stripConfigs.size(); i++) {
+            StripConfig config = stripConfigs.get(i);
             View strip = createStrip(i, config);
             container.addView(strip);
             animateStrip(strip, i * stripDelay, i, config);
@@ -201,7 +195,7 @@ public class GradientStripAnimation {
         return new StripConfig(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 dpToPx(18),
-                new int[]{0xFF1E3A8A, 0xFF3B82F6, 0xFF93C5FD, 0xFF3B82F6}
+                new int[]{0xFF8EA3FE, 0xFFA179C6, 0xFFB44F8F, 0xFF946591, 0xFF34A79A, 0xFF8D8CD3}
         );
     }
 

@@ -75,41 +75,35 @@ public class MainActivity extends Activity {
         List<GradientStripAnimation.StripConfig> configs = new ArrayList<>();
 
         // Strip 1: The Ethereal Whisper
-        configs.add(new GradientStripAnimation.StripConfig(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                dpToPx(18),
-                new int[]{0xFF2563EB, 0xFFffffff, 0xFF94C1D3})
+        configs.add(new GradientStripAnimation.StripConfig(LinearLayout.LayoutParams.MATCH_PARENT, dpToPx(18),
+                new int[]{0xFF8EA3FE, 0xFFA179C6, 0xFFB44F8F, 0xFF946591, 0xFF34A79A, 0xFF8D8CD3})
                 .setCornerRadius(dpToPx(4))
                 .setEnableShadow(true)
-                .setShadowColor(0x66000000)
+                .setShadowColor(0x66222327)
                 .setShadowRadius(dpToPx(1))
                 .setShadowDx(0)
                 .setShadowDy(dpToPx(0)));
 
         // Strip 2: The Ocean's Depth
-        configs.add(new GradientStripAnimation.StripConfig(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                dpToPx(18),
-                new int[]{0xFF94C1D3, 0xFF3B82F6, 0xFF1E3A8A})
+        configs.add(new GradientStripAnimation.StripConfig(LinearLayout.LayoutParams.MATCH_PARENT, dpToPx(18),
+                new int[]{0xFF8D8CD3, 0xFF8EA3FE, 0xFFA179C6, 0xFFB44F8F, 0xFF946591, 0xFF34A79A})
                 .setCornerRadius(dpToPx(4))
                 .setEnableShadow(true)
-                .setShadowColor(0x66000000)
+                .setShadowColor(0x66222327)
                 .setShadowRadius(dpToPx(1))
                 .setShadowDx(0)
                 .setShadowDy(dpToPx(0)));
 
         // Strip 3: The Celestial Dance
-        configs.add(new GradientStripAnimation.StripConfig(
-                dpToPx(450),
-                dpToPx(18),
-                new int[]{0xFF94C1D3, 0xFFffffff, 0xFF2563EB})
+        configs.add(new GradientStripAnimation.StripConfig(dpToPx(450), dpToPx(18),
+                new int[]{0xFF34A79A, 0xFF8D8CD3, 0xFF8EA3FE, 0xFFA179C6, 0xFFB44F8F, 0xFF946591})
                 .setCornerRadius(dpToPx(4))
                 .setEnableShadow(true)
-                .setShadowColor(0xFF2563EB)
+                .setShadowColor(0x66222327)
                 .setShadowRadius(dpToPx(1))
                 .setShadowDx(0)
                 .setShadowDy(dpToPx(0)));
-
+        
         new GradientStripAnimation(context, container)
                 .setStripConfigs(configs) // Set up and start the animation with the configured strips.
                 .setDuration(10000) // Set animation duration to 10 seconds.

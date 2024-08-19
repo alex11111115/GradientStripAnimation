@@ -1,8 +1,14 @@
+[![StandWithPalestine](https://raw.githubusercontent.com/karim-eg/StandWithPalestine/main/assets/palestine_badge.svg)](https://github.com/karim-eg/StandWithPalestine)   [![](https://jitpack.io/v/alex11111115/GradientStripAnimation.svg)](https://jitpack.io/#alex11111115/GradientStripAnimation) 
+
+[![ReadMeSupportPalestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg)](https://techforpalestine.org/learn-more)
+
 # 🌈 GradientStripAnimation: Unleash the Power of Hypnotic UI Magic! 🚀
 
 Are you tired of boring, static UIs that make your users yawn? Say goodbye to dull designs and hello to the mesmerizing world of **GradientStripAnimation**! This isn't just another animation library – it's a visual revolution that will have your users glued to their screens, questioning reality itself! 🤯
 
-## 🎭 Features That Will Blow Your Mind
+![GradientStripAnimation](https://github.com/user-attachments/assets/8e66fe51-57a0-40e0-8b56-a77ace5eaa81)
+
+## 🎭 Features That Will Blow Your Mind [![API](https://img.shields.io/badge/API-19%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=19) 
 
 - 🌊 Fluid, endless gradient animations that defy the laws of physics
 - 🎨 Customizable colors that would make a rainbow jealous
@@ -18,14 +24,18 @@ Are you tired of boring, static UIs that make your users yawn? Say goodbye to du
 4. **Performance Optimized**: Silky smooth animations that won't make your app break a sweat
 
 ## 📹 Video
-
+https://github.com/user-attachments/assets/c68bcd1f-f130-4226-ac00-451dc97f32f2
 
 
 ## 📸 Screenshots
+![Screenshot_٢٠٢٤٠٨١٩-٠٢١٦١٩_GradientStripAnimation](https://github.com/user-attachments/assets/8f1fb519-3bed-487e-8520-34e807ae3aa7)
+![Screenshot_٢٠٢٤٠٨١٩-٠٢١٦٢٢_GradientStripAnimation](https://github.com/user-attachments/assets/382ee354-67b4-4543-a243-72f551619e58)
+![Screenshot_٢٠٢٤٠٨١٩-٠٢١٦٣٩_GradientStripAnimation](https://github.com/user-attachments/assets/9d50aca2-acbb-4b9e-bff9-7bb9755be018)
+![Screenshot_٢٠٢٤٠٨١٩-٠٢١٧٤٩_GradientStripAnimation](https://github.com/user-attachments/assets/1393c5e7-dfd3-4b9d-86ec-c81884db5a56)
 
 
 
-## How to Use the Library?
+## How to Use the Library? ![GitHub top language](https://img.shields.io/github/languages/top/alex11111115/GradientStripAnimation?style=flat&color=red)
 
 ### 1. Add it in your root build.gradle at the end of repositories:
 
@@ -46,7 +56,7 @@ dependencyResolutionManagement {
 
 ```gradle
 dependencies {
-    implementation 'com.github.alex11111115:GradientStripAnimation:1.0'
+    implementation 'com.github.alex11111115:GradientStripAnimation:1.1'
 }
 ```
 
@@ -96,11 +106,9 @@ Create a list of `StripConfig` objects to define each strip's appearance:
 List<GradientStripAnimation.StripConfig> configs = new ArrayList<>();
 
 // Strip 1: The Ethereal Whisper
-configs.add(new GradientStripAnimation.StripConfig(
-    LinearLayout.LayoutParams.MATCH_PARENT, 
-    dpToPx(18), 
-    new int[]{0xFF2563EB, 0xFFffffff, 0xFF94C1D3}
-).setCornerRadius(dpToPx(4))
+configs.add(new GradientStripAnimation.StripConfig(LinearLayout.LayoutParams.MATCH_PARENT, dpToPx(18), 
+ new int[]{0xFF8EA3FE, 0xFFA179C6, 0xFFB44F8F, 0xFF946591, 0xFF34A79A, 0xFF8D8CD3 /*You can add more colors to infinity according to your need.*/})
+ .setCornerRadius(dpToPx(4))
  .setEnableShadow(true)
  .setShadowColor(0x66000000)
  .setShadowRadius(dpToPx(1))
@@ -108,11 +116,9 @@ configs.add(new GradientStripAnimation.StripConfig(
  .setShadowDy(dpToPx(0)));
 
 // Strip 2: The Ocean's Depth
-configs.add(new GradientStripAnimation.StripConfig(
-    LinearLayout.LayoutParams.MATCH_PARENT, 
-    dpToPx(18), 
-    new int[]{0xFF94C1D3, 0xFF3B82F6, 0xFF1E3A8A}
-).setCornerRadius(dpToPx(4))
+configs.add(new GradientStripAnimation.StripConfig(LinearLayout.LayoutParams.MATCH_PARENT, dpToPx(18), 
+ new int[]{0xFF8D8CD3, 0xFF8EA3FE, 0xFFA179C6, 0xFFB44F8F, 0xFF946591, 0xFF34A79A /*You can add more colors to infinity according to your need.*/})
+ .setCornerRadius(dpToPx(4))
  .setEnableShadow(true)
  .setShadowColor(0x66000000)
  .setShadowRadius(dpToPx(1))
@@ -120,11 +126,9 @@ configs.add(new GradientStripAnimation.StripConfig(
  .setShadowDy(dpToPx(0)));
 
 // Strip 3: The Celestial Dance
-configs.add(new GradientStripAnimation.StripConfig(
-    dpToPx(450), 
-    dpToPx(18), 
-    new int[]{0xFF94C1D3, 0xFFffffff, 0xFF2563EB}
-).setCornerRadius(dpToPx(4))
+configs.add(new GradientStripAnimation.StripConfig(dpToPx(450), dpToPx(18), 
+ new int[]{0xFF34A79A, 0xFF8D8CD3, 0xFF8EA3FE, 0xFFA179C6, 0xFFB44F8F, 0xFF946591 /*You can add more colors to infinity according to your need.*/})
+ .setCornerRadius(dpToPx(4))
  .setEnableShadow(true)
  .setShadowColor(0xFF2563EB)
  .setShadowRadius(dpToPx(1))
@@ -178,3 +182,46 @@ Don't just build apps – create experiences. With `GradientStripAnimation`, you
 So, are you ready to elevate your UI game and leave the mundane world behind? The power is in your hands. Use it wisely, and watch as your app becomes the talk of the town, the envy of your peers, and the object of your users' undying affection.
 
 Remember: In a world of static, be the motion. In a sea of boring, be the `GradientStripAnimation`. 🌈✨# GradientStripAnimation
+
+## Credits
+
+GradientStripAnimation is developed and maintained by [alex11111115](https://github.com/alex11111115).
+
+## Contribution
+
+We welcome contributions from the community! If you have ideas or improvements, feel free to submit pull requests or open issues on the [GitHub repository](https://github.com/alex11111115/GradientStripAnimation). 
+
+## License
+
+WavePlayerView is licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt). ![GitHub license](https://img.shields.io/github/license/alex11111115/GradientStripAnimation?style=flat&color=blue)
+
+[![StandWithPalestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/StandWithPalestine.svg)](https://techforpalestine.org/learn-more) [![StandWithPalestineBadgeBordered](https://raw.githubusercontent.com/saedyousef/StandWithPalestine/main/badges/flat/bordered/StandWithPalestine.svg)](https://techforpalestine.org/learn-more)
+
+## More Info
+
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <div style="border: 1px solid #e1e4e8; border-radius: 5px; padding: 10px; width: 200px; text-align: center;">
+    <p>Total Downloads</p>
+    <img src="https://img.shields.io/github/downloads/alex11111115/GradientStripAnimation/total?style=flat&color=brightgreen" alt="Total Downloads">
+  </div>
+  <div style="border: 1px solid #e1e4e8; border-radius: 5px; padding: 10px; width: 200px; text-align: center;">
+    <p>Repo Size</p>
+    <img src="https://img.shields.io/github/repo-size/alex11111115/GradientStripAnimation?style=flat&color=blue" alt="Repo Size">
+  </div>
+  <div style="border: 1px solid #e1e4e8; border-radius: 5px; padding: 10px; width: 200px; text-align: center;">
+    <p>Code Size</p>
+    <img src="https://img.shields.io/github/languages/code-size/alex11111115/GradientStripAnimation?style=flat&color=orange" alt="Code Size">
+  </div>
+  <div style="border: 1px solid #e1e4e8; border-radius: 5px; padding: 10px; width: 200px; text-align: center;">
+    <p>Last Commit</p>
+    <img src="https://img.shields.io/github/last-commit/alex11111115/GradientStripAnimation?style=flat&color=yellow" alt="Last Commit">
+  </div>
+  <div style="border: 1px solid #e1e4e8; border-radius: 5px; padding: 10px; width: 200px; text-align: center;">
+    <p>Latest Release</p>
+    <img src="https://img.shields.io/github/v/release/alex11111115/GradientStripAnimation?style=flat&color=blue" alt="Latest Release">
+  </div>
+  <div style="border: 1px solid #e1e4e8; border-radius: 5px; padding: 10px; width: 200px; text-align: center;">
+    <p>Project Status</p>
+    <img src="https://img.shields.io/badge/status-active-brightgreen?style=flat" alt="Project Status">
+  </div>
+  <div style="border: 1px solid #e1e4e8; border-radius: 5px; padding: 10px; width: 200px; text-align: center;">
