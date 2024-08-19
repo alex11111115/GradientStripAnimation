@@ -2,9 +2,11 @@
 
 [![ReadMeSupportPalestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg)](https://techforpalestine.org/learn-more)
 
-# 🌈 GradientStripAnimation: Unleash the Power of Hypnotic UI Magic! 🚀 
+# 🌈 GradientStripAnimation: Unleash the Power of Hypnotic UI Magic! 🚀
 
 Are you tired of boring, static UIs that make your users yawn? Say goodbye to dull designs and hello to the mesmerizing world of **GradientStripAnimation**! This isn't just another animation library – it's a visual revolution that will have your users glued to their screens, questioning reality itself! 🤯
+
+![GradientStripAnimation](https://github.com/user-attachments/assets/8e66fe51-57a0-40e0-8b56-a77ace5eaa81)
 
 ## 🎭 Features That Will Blow Your Mind [![API](https://img.shields.io/badge/API-16%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=16) 
 
