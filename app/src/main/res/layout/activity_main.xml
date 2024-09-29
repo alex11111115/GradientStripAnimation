@@ -37,7 +37,23 @@
          android:layout_width="160dp"
          android:gravity="center"
          android:textColor="#1F2933"
+         android:id="@+id/auto"
+         android:text="auto" />
+    
+    <Button
+         android:layout_height="40dp"
+         android:layout_width="160dp"
+         android:gravity="center"
+         android:textColor="#1F2933"
          android:id="@+id/start"
          android:text="start" />
+    
+    <Button
+         android:layout_height="40dp"
+         android:layout_width="160dp"
+         android:gravity="center"
+         android:textColor="#1F2933"
+         android:id="@+id/stop"
+         android:text="stop" />
 
 </LinearLayout>

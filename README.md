@@ -29,6 +29,7 @@ https://github.com/user-attachments/assets/c68bcd1f-f130-4226-ac00-451dc97f32f2
 
 ## 📸 Screenshots
 ![Screenshot_٢٠٢٤٠٨١٩-٠٢١٦١٩_GradientStripAnimation](https://github.com/user-attachments/assets/8f1fb519-3bed-487e-8520-34e807ae3aa7)
+![Screenshot_٢٠٢٤٠٨١٩-١٩٣٥٣٤_GradientStripAnimation](https://github.com/user-attachments/assets/d3cf6407-26c5-425c-ad82-f556ea096b21)
 ![Screenshot_٢٠٢٤٠٨١٩-٠٢١٦٢٢_GradientStripAnimation](https://github.com/user-attachments/assets/382ee354-67b4-4543-a243-72f551619e58)
 ![Screenshot_٢٠٢٤٠٨١٩-٠٢١٦٣٩_GradientStripAnimation](https://github.com/user-attachments/assets/9d50aca2-acbb-4b9e-bff9-7bb9755be018)
 ![Screenshot_٢٠٢٤٠٨١٩-٠٢١٧٤٩_GradientStripAnimation](https://github.com/user-attachments/assets/1393c5e7-dfd3-4b9d-86ec-c81884db5a56)
@@ -56,7 +57,7 @@ dependencyResolutionManagement {
 
 ```gradle
 dependencies {
-    implementation 'com.github.alex11111115:GradientStripAnimation:1.1'
+    implementation 'com.github.alex11111115:GradientStripAnimation:1.2'
 }
 ```
 
@@ -110,7 +111,7 @@ configs.add(new GradientStripAnimation.StripConfig(LinearLayout.LayoutParams.MAT
  new int[]{0xFF8EA3FE, 0xFFA179C6, 0xFFB44F8F, 0xFF946591, 0xFF34A79A, 0xFF8D8CD3 /*You can add more colors to infinity according to your need.*/})
  .setCornerRadius(dpToPx(4))
  .setEnableShadow(true)
- .setShadowColor(0x66000000)
+ .setShadowColor(0x66222327)
  .setShadowRadius(dpToPx(1))
  .setShadowDx(0)
  .setShadowDy(dpToPx(0)));
@@ -120,7 +121,7 @@ configs.add(new GradientStripAnimation.StripConfig(LinearLayout.LayoutParams.MAT
  new int[]{0xFF8D8CD3, 0xFF8EA3FE, 0xFFA179C6, 0xFFB44F8F, 0xFF946591, 0xFF34A79A /*You can add more colors to infinity according to your need.*/})
  .setCornerRadius(dpToPx(4))
  .setEnableShadow(true)
- .setShadowColor(0x66000000)
+ .setShadowColor(0x66222327)
  .setShadowRadius(dpToPx(1))
  .setShadowDx(0)
  .setShadowDy(dpToPx(0)));
@@ -130,7 +131,7 @@ configs.add(new GradientStripAnimation.StripConfig(dpToPx(450), dpToPx(18),
  new int[]{0xFF34A79A, 0xFF8D8CD3, 0xFF8EA3FE, 0xFFA179C6, 0xFFB44F8F, 0xFF946591 /*You can add more colors to infinity according to your need.*/})
  .setCornerRadius(dpToPx(4))
  .setEnableShadow(true)
- .setShadowColor(0xFF2563EB)
+ .setShadowColor(0x66222327)
  .setShadowRadius(dpToPx(1))
  .setShadowDx(0)
  .setShadowDy(dpToPx(0)));
@@ -149,8 +150,19 @@ new GradientStripAnimation(context, container)
     .setDuration(5000)  // 5 seconds of pure visual ecstasy
     .setStripDelay(150)  // A tantalizing 150ms delay between strips
     .setOnAnimationEndListener(() -> {
-        // Add your method here
+        // Add your own method here so that when the animation is finished something happens like text appears etc.
     }).startAnimation();
+```
+
+### Step 4: Very important function
+
+Add this method in your activity or class to convert dp to Px
+
+```java
+private int dpToPx(int dp) {
+    float density = context.getResources().getDisplayMetrics().density;
+    return Math.round((float) dp * density);
+}
 ```
 
 ## 🧙‍♂️ Customization: Your Imagination is the Limit
