@@ -30,11 +30,14 @@ https://github.com/user-attachments/assets/3aff3def-c0b4-4788-89b1-b6be0c76a7dd
 
 
 
->You can make it as an amazing and perfect shimmer effect without the need for those old and outdated offices + You can stop it anytime you want.
+>You can make it as an amazing and perfect shimmer effect without the need for those old and outdated libraries + You can stop it anytime you want like when load firebase database.
 
 https://github.com/user-attachments/assets/0ec8b304-49bd-4e0e-a68a-7a013d216951
 
 ## 📸 Screenshots
+![1000366155](https://github.com/user-attachments/assets/72eec53b-5eee-4dd3-bce3-5bea385a614c)
+![1000366154](https://github.com/user-attachments/assets/18b396b2-b9e4-4660-8509-eaf0090955cc)
+![1000366153](https://github.com/user-attachments/assets/b377bb33-18bf-4626-9534-58dbaaf33eb3)
 
 
 
